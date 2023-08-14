@@ -21,6 +21,7 @@ app.use(cors(corsOptions));
 app.use(logger);
 
 app.use('/', require('./routes/root'));
+app.use('/users', require('./routes/userRoutes'));
 
 app.all('*', (req, res) => {
   res.status(404);
